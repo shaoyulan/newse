@@ -9,9 +9,9 @@
 
 // 引入要用到的js檔---------------------------------------------------------------------------------------------------------------------
 //fancybox
-document.write('<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css?v=2.1.5" media="screen"/>');
-document.write('<script src="/plugin/fancybox/jquery.mousewheel-3.0.6.pack.js"><\/script>');
-document.write('<script src="/plugin/fancybox/jquery.fancybox.pack.js?v=2.1.5"><\/script>');
+document.write('<link rel="stylesheet" href="plugin/fancybox/jquery.fancybox.css?v=2.1.5" media="screen"/>');
+document.write('<script src="plugin/fancybox/jquery.mousewheel-3.0.6.pack.js"><\/script>');
+document.write('<script src="plugin/fancybox/jquery.fancybox.pack.js?v=2.1.5"><\/script>');
 
 $(function() {
     // 修改密碼驗證---------------------------------------------------------------------------------------------------------------------
