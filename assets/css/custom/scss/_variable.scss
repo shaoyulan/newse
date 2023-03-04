@@ -1,0 +1,302 @@
+
+/* 編寫順序
+ *
+ * - 色彩
+ * - 文字
+ * - Header、Footer 設定
+ * - Breakpoints
+ */
+
+/*----------------------------------------------------------
+	Theme Color 主/輔 顏色
+-----------------------------------------------------------*/
+// 主色
+$color-primary: darken(#1d73c8,20%);
+
+// 輔色 1
+$color-sec: #c0deec;
+
+// 輔色 2
+$color-trd: #dee9ee;
+
+// 黑
+$color-black: #333333;
+
+// 灰
+$color-gray-dark:#666666;
+$color-gray:#999999;
+$color-gray-light:#cccccc;
+
+// 橘
+$color-orange: #ff6600;
+
+// 黃
+$color-yellow: #fec500;
+$color-yellow2: #FFB300;
+
+/*----------------------------------------------------------
+	文字顏色
+-----------------------------------------------------------*/
+$color-font: #000000;
+$color-font-gray: #808080;
+
+/*----------------------------------------------------------
+	錯誤顏色
+-----------------------------------------------------------*/
+$color-danger: #ff5970;
+
+/*----------------------------------------------------------
+	提示顏色
+-----------------------------------------------------------*/
+$color-tips-text: #ff5970;
+$color-tips-bg: #fff;
+
+/*----------------------------------------------------------
+	醒目顏色
+-----------------------------------------------------------*/
+$color-hilight: #ff5970;
+
+/*----------------------------------------------------------
+	Money 貨幣顏色
+-----------------------------------------------------------*/
+$color-money: #ff6600;
+
+/*----------------------------------------------------------
+	社群顏色
+-----------------------------------------------------------*/
+$color-line: #00c300;
+$color-fb: #4e70b7;
+$color-muki: #25b7aa;
+
+
+/*----------------------------------------------------------
+	背景色
+-----------------------------------------------------------*/
+// body 背景
+$color-bg: #fafafa;
+
+// 區塊底色
+$color-wrap-bg: #fff;
+
+// 區塊影子
+$shadow-wrap: 0 5px 10px rgba(0,0,0,.13);
+
+/*----------------------------------------------------------
+	側選單
+-----------------------------------------------------------*/
+// 側選單底色
+$color-menu-bg:  #fff;
+
+// 側選單第二層底色
+$color-menu-sec-bg:  $color-sec;
+
+// 側選單第三層底色
+$color-menu-trd-bg:  $color-trd;
+
+
+/*----------------------------------------------------------
+	分隔線
+-----------------------------------------------------------*/
+$color-hr: #ccc;
+
+
+/*----------------------------------------------------------
+	遮罩
+-----------------------------------------------------------*/
+$color-mask: rgba(0,0,0,.8);
+
+
+/*----------------------------------------------------------
+	表格
+-----------------------------------------------------------*/
+// 表格底色
+$color-table-bg: #fff;
+
+// 表格標題顏色
+$color-table-header-bg: #fff;
+
+// 表格隔列顏色
+$color-table-odd-bg:  #fff;
+
+// 表格TR滑入顏色
+$color-table-hover-bg: #fff;
+
+/*----------------------------------------------------------
+	表單
+-----------------------------------------------------------*/
+// INPUT提示字顏色
+$color-placeholder: #808080;
+
+// 表單元件的border色
+$color-input-border: #ced4da;
+
+// input 輸入字顏色
+$color-input-text: #333;
+
+// input readonly的顏色
+$color-input-readonly: #e9ecef;
+
+// input title的顏色
+$color-input-title: #000;
+
+// custom-control勾的icon顏色 (未勾) TODO: 沒用到
+$color-custom-control-unchecked: #fff;
+
+// custom-control勾的icon顏色 (已勾)(僅用於bs預設的icon)
+$color-custom-control-checked: #fff;
+
+// custom-control背景色 (未勾)
+$color-custom-control-unchecked-bg: #fff;
+
+// custom-control背景色 (已勾)
+$color-custom-control-checked-bg: $color-yellow;
+
+// checkbox背景色 (indeterminate)
+$color-checkbox-indeterminate-bg: $color-yellow;
+
+// Checkbox Border (未勾)
+$border-checkbox-unchecked: 1px solid $color-input-border;
+
+// Checkbox Border (已勾)
+$border-checkbox-checked: none;
+
+// Checkbox Border (indeterminate)
+$border-checkbox-indeterminate: none;
+
+// Radio Border (未勾)
+$border-radio-unchecked: 1px solid $color-input-border;
+
+// Radio Border (已勾)
+$border-radio-checked: none;
+
+
+// Checkbox Icon (未勾)
+@mixin icon-checkbox-unchecked {
+}
+
+// Checkbox Icon (已勾)
+@mixin icon-checkbox-checked {
+}
+
+// Checkbox Icon (Indeterminated)
+@mixin icon-checkbox-indeterminate {
+}
+
+// Radio Icon (未勾)
+@mixin icon-radio-unchecked {
+	width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 10px;
+    left: 5px;
+
+}
+
+// Radio Icon (已勾)
+@mixin icon-radio-checked {
+	background: #fff;
+}
+
+// Radio Icon (Hover)
+@mixin icon-radio-hover{
+	transform: scale(5);
+	background: rgba($color-yellow, .2);
+}
+
+/***********************************************************
+	Font 文字
+***********************************************************/
+// Nunito
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+// Carme
+@import url('https://fonts.googleapis.com/css2?family=Carme&display=swap');
+
+// Perpetua
+@font-face {
+    font-family: 'Perpetua';
+    src: url('/assets/fonts/unicode.perpetua-webfont.woff2') format('woff2'),
+         url('/assets/fonts/unicode.perpetua-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$ff-note: 'Carme', Arial, "微軟正黑體", "Microsoft JhengHei" , sans-serif, "黑體", "蘋果儷中黑";
+$ff-msjh: "微軟正黑體", "Microsoft JhengHei";
+$ff-carme: 'Carme', sans-serif;
+$ff-perpetua: 'Perpetua', sans-serif;
+$ff-nunito: 'Nunito', sans-serif;
+
+
+/*----------------------------------------------------------
+	預設
+-----------------------------------------------------------*/
+// 預設
+$fz-body:16px;
+
+// 無單位
+$general-num: 16;
+
+// 最小字
+$fz-mini:12px;
+
+
+/*----------------------------------------------------------
+	標題字
+-----------------------------------------------------------*/
+// 主標
+$fz-title   : (24 / $general-num) * 1rem;
+$fz-title-en: (24 / $general-num) * 1rem;
+
+// 次標
+$fz-subtitle: (24 / $general-num) * 1rem;
+
+
+/*----------------------------------------------------------
+	字體
+-----------------------------------------------------------*/
+$fz-h1: (22 / $general-num) * 1rem;
+$fz-h2: (18 / $general-num) * 1rem;
+$fz-h3: (16 / $general-num) * 1rem;
+$fz-h4: (14 / $general-num) * 1rem;
+
+
+/***********************************************************
+	桌機選單 選項 PC Menu Options
+***********************************************************/
+$height-header: 70px;
+$height-header-mobile: 70px;
+$color-header-bg: $color-primary; // 底色
+$color-header-menu-sec-bg: $color-primary; // 選單第2層
+
+
+/***********************************************************
+	頁尾 選項 Footer Options
+***********************************************************/
+$color-footer-bg: #fff; // 背景
+
+
+/***********************************************************
+	Breakpoints
+***********************************************************/
+$breakpoints: (
+	"pc-xxl"	: 1366px,
+	"pc-xl"		: 1365.98px,
+	"pc-lg"		: 1199.98px,
+	"pc"		: 991.98px,
+	"tablet"	: 768px,
+	"mobile-xl"	: 575.98px,
+	"mobile-lg"	: 414px,
+	"mobile"	: 375px,
+	"mobile-xs"	: 320px,
+);
+
+
+/***********************************************************
+	專案自訂
+***********************************************************/
+$breakpoints-mob-menu-transform: 768;
+$width-fixed-page-menu: 240px;
+
+$transition-stone-like: 3s ease-in-out;
+

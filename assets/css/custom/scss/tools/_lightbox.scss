@@ -1,0 +1,182 @@
+// Media Card
+.media-card .card{
+  border:0;
+}
+.media-card .card-body{
+  padding:10px 0;
+  text-align:center;
+}
+.media-card .card-title{
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  width : 100%;
+}
+.media-card .card-head{
+  position:relative;
+  width:100%;
+  height:0;
+  padding-bottom:75%;
+  overflow:hidden;
+  border-radius:0;
+  display: block; // Fix for IE10;
+}
+.media-card .card-head img{
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  position: absolute;
+  left:0; right:0; top:0; bottom:0;
+  margin:auto;
+  border-radius:0;
+}
+
+
+// Media Modal
+.media-modal .modal-dialog {
+  margin:auto;
+  padding: .5rem;
+}
+
+.media-modal .modal-content{
+  background:none;
+  border:0;
+  text-align:center;
+}
+.media-modal .modal-header, .media-modal .m-footer{
+  border:0;
+  text-align:center;
+}
+.media-modal .m-footer .title{
+  max-width:80%;
+  width:auto;
+  display: inline-block;
+  margin:10px auto;
+  background:rgba(0,0,0,0.5);
+  padding:10px 30px;
+  border-radius:50px;
+  color:#fff;
+  font-size:12px;
+  text-align: left;
+}
+.media-modal .select-page{
+  margin:0 auto;
+  color:#fff;
+}
+.media-modal .modal-dialog{
+    width: 100%;
+    max-width: 100% !important;
+    padding-top:80px;
+}
+.media-modal .modal-body{
+  max-height:60vh;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+// 下拉
+.media-modal-img-now , .modal-footer .media-modal-img-total{
+  margin-left:10px;
+  margin-right:10px;
+  display:inline-block;
+  width: auto;
+}
+.media-modal-img-now.form-control{
+  background: none;
+  outline: none;
+  color: #fff;
+  option {
+    color: $color-font;
+  }
+  &:focus{
+    outline: none;
+    background: none;
+  }
+}
+// 下拉 (end)
+
+// owl
+.media-modal-owl{
+  opacity:0;
+  height:60vh;
+}
+.media-modal-owl.show{
+  opacity:1;
+  transition:1s;
+}
+.media-modal-owl .owl-item .item img{
+  max-height:100%;
+  max-width:100%;
+  width:auto;
+}
+.media-modal-owl .owl-nav button.owl-prev:focus, .media-modal-owl .owl-nav button.owl-next:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.media-modal-owl .owl-nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.media-modal-owl.owl-drag .owl-item .item {
+    height: 60vh;
+    line-height: 60vh;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+}
+.media-modal-owl .owl-nav {
+    font-size: 80px;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+// owl (end)
+
+// close-btn
+.close-btn{
+  width:80px;
+  height:80px;
+  position:fixed;
+  right:0px;
+  top:0px;
+  background:none;
+  border:0;
+  font-size:80px;
+  color:#fff;
+}
+.close-btn:focus{
+  outline:0;
+}
+.close-btn:after ,.close-btn:before{
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    display: block;
+    top:0;
+    left:50%;
+  margin-left:-1px;
+  transition:.5s;
+  cursor:pointer;
+}
+.close-btn:after {
+    transform: rotate(45deg);
+}
+.close-btn:before {
+    transform: rotate(-45deg);
+}
+.close-btn:hover:after{
+    transform: rotate(-45deg);
+}
+.close-btn:hover:before{
+    transform: rotate(45deg);
+}
+// close-btn (end)

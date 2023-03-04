@@ -1,0 +1,118 @@
+
+@mixin pc-xxl { //  1366
+	@media (min-width: map-get($breakpoints, pc-xxl)) {
+		@content
+	}
+}
+
+
+@mixin pc-xl { //  1365.98
+	@media (max-width: map-get($breakpoints, pc-xl)) {
+		@content
+	}
+}
+
+
+@mixin pc-lg { //  1199.98
+	@media (max-width: map-get($breakpoints, pc-lg)) {
+		@content
+	}
+}
+
+
+@mixin pc { //  991.98
+	@media (max-width: map-get($breakpoints, pc)) {
+		@content
+	}
+}
+
+
+@mixin tablet { //  768
+	@media (max-width: map-get($breakpoints, tablet)) {
+		@content
+	}
+}
+
+
+@mixin mobile-xl { //  575.98
+	@media (max-width: map-get($breakpoints, mobile-xl)) {
+		@content
+	}
+}
+
+
+@mixin mobile-lg { //  414
+	@media (max-width: map-get($breakpoints, mobile-lg)) {
+		@content
+	}
+}
+
+
+@mixin mobile { //  375
+	@media (max-width: map-get($breakpoints, mobile)) {
+		@content
+	}
+}
+
+
+@mixin mobile-xs { //  320
+	@media (max-width: map-get($breakpoints, mobile-xs)) {
+		@content
+	}
+}
+
+
+@mixin media-up($media, $alter:0) {
+	// 預設值
+	$new_media : unquote($media);
+	// alter 無須加上px
+	$alter : unquote($alter);
+
+	// 是否是模組定義的斷點
+	@if type-of($media) == 'string' {
+		$new_media : to-number( str-replace( quote(map-get($breakpoints, $media)), px, ''));
+	}
+
+	@media (min-width: $new_media + $alter  + 'px') {
+		@content
+	}
+}
+
+
+@mixin media-between($media_max, $media_min) {
+	// 預設值
+	$new_media_max : unquote($media_max);
+	$new_media_min : unquote($media_min);
+
+	// 是否是模組定義的斷點
+	@if type-of($media_max) == 'string' {
+		$new_media_max : to-number( str-replace( quote(map-get($breakpoints, $media_max)), px, ''));
+	}
+	@if type-of($media_min) == 'string' {
+		$new_media_min :to-number( str-replace( quote(map-get($breakpoints, $media_min)), px, ''));
+	}
+
+	@media (max-width: $new_media_max + 'px') and (min-width: $new_media_min + 'px') {
+		@content
+	}
+}
+
+
+@mixin media($media, $alter:0) {
+	// 預設值
+	$new_media : unquote($media);
+	// alter 無須加上px
+	$alter : unquote($alter);
+
+	// 是否是模組定義的斷點
+	@if type-of($media) == 'string' {
+		$new_media : to-number( str-replace( quote(map-get($breakpoints, $media)), px, ''));
+	}
+
+	@media (max-width: $new_media + $alter + 'px') {
+		@content
+	}
+}
+
+
+

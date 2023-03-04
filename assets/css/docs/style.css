@@ -1,0 +1,234 @@
+html,body{
+	margin:0; padding:0;
+	color: #bdcadb;
+    background: #1c1f2b;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,'微軟正黑體';
+    box-sizing: border-box;
+	font-size: 16px;
+}
+body{
+	padding-left: 320px;
+}
+a{
+	color: #3eb1d0;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+h1{
+	font-size: 2rem;
+}
+h2{
+	font-size: 1.6rem;
+}
+h3{
+	font-size: 1.2rem;
+}
+hr{
+	border:1px #000 solid;
+    border-bottom: 1px #2d3143 solid;
+    border-top: 1px #000 solid;
+}
+table{
+	width: 100%;
+	margin:10px 0;
+	border-spacing: 0;
+	border-left: 1px #666c89 solid;
+	border-top: 1px #666c89 solid;
+}
+table th,table td{
+	border-right: 1px #666c89 solid;
+	border-bottom: 1px #666c89 solid;
+}
+table th{
+	background-color: #282f52;
+	background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255,255,255,.03) 10px, rgba(255,255,255,.03) 20px);
+}
+th,td{
+	padding: 5px;
+}
+pre{
+	border:1px #666c89 solid;
+}
+.hljs{
+	padding-bottom: 2em !important;
+}
+.highlight{
+	color: #e6db74;
+}
+.highlight2{
+	color: #ff7cc7;
+}
+.page-wrapper,.book-summary{min-height: 100vh;}
+.book-summary {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-y: auto;
+    width: 300px;
+    height: 100vh;
+    color: #bcc1d2;
+    background: #2d3143;
+    border-right: none;
+}
+.search-input{
+    height: 44px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.book-summary ul{
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+.book-summary li{
+	padding:10px 5px 0px 18px;
+}
+.book-summary li.chapter > ol{
+    margin-left: -18px;
+}
+.book-summary li.chapter > ol > li{
+    margin-bottom: 20px;
+}
+.book-summary li.chapter > ol > li > a,
+.book-summary li.chapter > ol > li:before {
+    color: #e6db74;
+}
+.book-summary ul > li{
+	border-top: 1px #1c1f2b solid;
+    padding-bottom: 10px;
+}
+ol { counter-reset: item; padding-left: 0; }
+ol li{ display: block }
+ol li:before { content: counters(item, ".") ". "; counter-increment: item }
+.book-summary a{
+    color: #bcc1d2;
+    text-decoration: none;
+}
+.page-wrapper {
+    position: static;
+    padding:20px 30px 60px 10px;
+    box-sizing: border-box;
+}
+.btn{
+	cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.btn-info {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-dark {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+.btn-link {
+    font-weight: 400;
+    color: #3eb1d0;
+    text-decoration: none;
+}
+.btn-primary:hover {
+    background:#00458f;
+    border-color: #00458f;
+}
+.btn-secondary:hover {
+    background:#3e4449;
+    border-color: #3e4449;
+}
+.btn-success:hover {
+    background:#227d0c;
+    border-color: #227d0c;
+}
+.btn-info:hover {
+    background:#097d8f;
+    border-color: #097d8f;
+}
+.btn-warning:hover {
+    background:#ffdb96;
+    border-color: #ffdb96;
+}
+.btn-danger:hover {
+    background:#d95460;
+    border-color: #d95460;
+}
+.btn-dark:hover {
+    background:#010101;
+    border-color: #010101;
+}
+.btn-light:hover {
+    background:#bdcadb;
+    border-color: #bdcadb;
+}
+.btn-link:hover{
+	text-decoration: underline;
+}
+.chapter li.active {
+    position: relative;
+}
+.chapter li.active:after {
+    left: 2px;
+    bottom: 5px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #FF9800;
+    border-width: 5px;
+}
+.chapter li.active:before , 
+.chapter li.active a{
+    color: #FF9800;
+}

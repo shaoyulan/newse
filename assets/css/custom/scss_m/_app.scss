@@ -1,0 +1,21 @@
+/* =============================
+            SCSS 引入
+============================= */
+// 清除預設樣式
+@import 'reset';
+// 變數
+@import 'variable';
+// 整合功能(Function)
+@import 'tools/mixin';
+// 動畫或視覺效果
+@import 'tools/effect';
+// 格線或media query
+@import 'tools/grid';
+// 全域共用(元件、各頁專屬樣式)
+@import 'base';
+// 所有index底下的頁面樣式
+@import 'page/page';
+// 所有login底下的頁面樣式
+@import 'page/login';
+// 所有購物車底下的頁面樣式
+@import 'page/shopping';

@@ -1,0 +1,108 @@
+/* =============================
+           位置、排版
+============================= */
+@mixin absolute($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin pos-center($translateX: -50%, $translateY: -50%) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate($translateX, $translateY);
+}
+
+@mixin flex($justify-content:center, $align-items:center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+// RWD 以上尺寸
+@mixin media-up($breakpoints) {
+    @media screen and (min-width: $breakpoints) {
+        @content;
+    }
+}
+
+// RWD 以下尺寸
+@mixin media($breakpoints) {
+    @media screen and (max-width: $breakpoints) {
+        @content;
+    }
+}
+
+// overflow hidden
+@mixin sizeOverflowHidden($height) {
+    height: 0;
+    padding-bottom: $height;
+    overflow: hidden;
+}
+/* =============================
+         位置、排版(end)
+============================= */
+
+/* =============================
+          文字、字數限制
+============================= */
+// 行數限制
+@mixin text-lines-ellipsis($line-height, $max-lines) {
+    display: -webkit-box;
+    overflow: hidden;
+    line-height: $line-height;
+    white-space: normal;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $max-lines;
+    -webkit-box-orient: vertical;
+}
+
+// 字數寬度限制
+@mixin text-ellipsis($w: 100%) {
+    width: $w;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// FontAwesome 樣式
+@mixin fa-icon($unicode) {
+    content: $unicode;
+    font-family: 'FontAwesome';
+}
+
+/* =============================
+        文字、字數限制(end)
+============================= */
+
+/* =============================
+              其他
+============================= */
+// 尺寸
+@mixin size($w, $h: $w) {
+    width: $w;
+    height: $h;
+}
+
+// 動畫
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin imgHidden($w, $h) {
+    @include size($w, 0);
+    padding-bottom: $h;
+    overflow: hidden;
+}
+/* =============================
+            其他(end)
+============================= */

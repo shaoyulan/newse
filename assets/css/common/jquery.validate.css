@@ -1,0 +1,4 @@
+div.error { display: none; }
+input.error { border: 1px solid red !important; }
+select.error { border: 1px solid red !important; }
+textarea.error { border: 1px solid red !important; }

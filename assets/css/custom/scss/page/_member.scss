@@ -1,0 +1,776 @@
+/*
+ *
+ * Member 相關頁面
+ * 順序 : A - Z
+ * 名稱 : 同 HTML 檔名
+ *
+ */
+
+/*********************************
+    member 共用
+**********************************/
+.p-member{
+    .panel{
+        background: #fff;
+        padding: 40px 25px;
+        @include tablet{
+            padding: 30px 15px;
+        }
+    }
+
+    /*------------------------------------------
+        Icon 設定
+    --------------------------------------------*/
+    // 調整特定icon大小
+    // .form-group{
+    //     .fa.fa-id-card-o{font-size: 28px;}
+    //     .fa.fa-birthday-cake{font-size: 32px;}
+    //     .fa.fa-mobile{font-size: 45px;}
+    //     .fa.fa-envelope{font-size: 33px;}
+    // }
+    // 調整特定icon大小(end)
+
+}
+
+
+/*********************************
+    bonus
+**********************************/
+.p-bonus{
+    .container{
+        @include tablet{
+            max-width: 100%;
+        }
+    }
+
+    /*-----------------------------------------------------------------
+        我的紅利點數
+    --------------------------------------------------------------------*/
+    .sect-bonus-info{
+        background: $color-trd;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 40px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        // 分隔線
+        &:before{
+            content:'';
+            display: block;
+            position: absolute;
+            width:1px;
+            background:#fff;
+            top:10px;
+            bottom:10px;
+            left:50%;
+            transform: translate(-50%,0);
+            @include pc{
+                display: none;
+            }
+        }
+    }
+
+    // 目前點數
+    .info-remain{
+        flex:50%;
+        max-width: 50%;
+        text-align: center;
+        @include pc{
+            flex:100%;
+            max-width: 100%;
+            // 分隔線
+            &:after {
+                content: '';
+                height: 1px;
+                display: block;
+                width: 100%;
+                background: #fff;
+                margin: 3% 0 0 0;
+            }
+        }
+    }
+
+    .remain-points{
+        .num{
+            color: $color-money;
+            font-size: 2.5rem;
+        }
+    }
+
+    // 使用說明
+    .info-usage{
+        flex:50%;
+        max-width: 50%;
+        padding: 0px 30px;
+        ol{
+            margin-bottom: 0;
+        }
+        @include pc{
+            flex:100%;
+            max-width: 100%;
+            padding: 3%;
+        }
+    }
+
+    /*-----------------------------------------------------------------
+        點數詳細資訊
+    --------------------------------------------------------------------*/
+    .sect-tab{
+        .card-body{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    /*-----------------------------------------------------------------
+        List
+    --------------------------------------------------------------------*/
+    .lists-bonus{
+        margin:0;
+    }
+
+
+    .item-date{
+        flex:22%;
+        max-width: 22%;
+
+    }
+    .item-desc{
+        flex:27%;
+        max-width: 27%;
+    }
+    .item-value{
+        flex:22%;
+        max-width: 22%;
+        text-align: center;
+    }
+    .item-used{
+        flex:17%;
+        max-width: 17%;
+        text-align: center;
+        position: relative;
+
+    }
+    .item-deadline{
+        flex:12%;
+        max-width: 12%;
+        text-align: center;
+    }
+    /*--------------------------------------------------------------------
+        Item
+    -------------------------------------------------------------------*/
+    .list-item
+    {
+        .item-value{
+            color:$color-money;
+        }
+        .item-used{
+
+        }
+        .badge{
+            position: absolute;
+            margin:5px;
+            @include tablet{
+                position: relative;
+                margin:0 5px;
+            }
+        }
+    }
+}
+
+
+/*********************************
+    credit
+**********************************/
+.p-credit{
+    .container{
+        @include tablet{
+            max-width:100%;
+        }
+    }
+
+    .item{
+        padding:0 5px;
+    }
+
+    .lists-credit{
+        margin:0;
+    }
+
+    .list-title,
+    .list-item
+    {
+        .item-name{
+            flex:25%;
+            max-width: 25%;
+
+        }
+        .item-threshold{
+            flex:15%;
+            max-width: 15%;
+        }
+        .item-value{
+            flex:15%;
+            max-width: 15%;
+            text-align: right;
+        }
+        .item-deadline{
+            flex:30%;
+            max-width: 30%;
+            text-align: center;
+            position: relative;
+
+        }
+        .item-status{
+            flex:15%;
+            max-width: 15%;
+            text-align: center;
+        }
+    }
+
+    /*--------------------------------------------------------------------
+        Title
+    -------------------------------------------------------------------*/
+    .list-title{
+        .item-deadline{
+            text-align: left;
+            padding-left:8.9%;
+        }
+    }
+    /*--------------------------------------------------------------------
+        Item
+    -------------------------------------------------------------------*/
+    .list-item
+    {
+        .item-value{
+            color:$color-money;
+        }
+        .item-deadline{
+            text-align: left;
+            padding-left:8.5%;
+            .badge{
+                margin:5px;
+            }
+        }
+        .deadline-date{
+            display: inline;
+        }
+    }
+
+    @include mobile-xl{
+        .list-item .item-deadline{
+            padding-left:100px;
+        }
+    }
+}
+
+
+/*********************************
+    favorite
+**********************************/
+.p-favorite{
+    .product-list-wrapper{
+        margin-bottom: 5%;
+        .box-showcase{
+            max-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .col-item {
+        margin-bottom: 35px;
+    }
+}
+
+
+/*********************************
+    information
+**********************************/
+.p-information{
+    .panel{
+        padding:40px 15px;
+    }
+    /***********************************************************
+	    基礎設定
+    ***********************************************************/
+    .form-row{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .help-block{
+        position: absolute;
+        bottom: -24px;
+        left:0;
+    }
+
+    /*------------------------------------------
+        欄位設定
+    --------------------------------------------*/
+    .form-group-multiple{
+        margin-bottom: .5rem;
+        padding: 0 17.5px;
+    }
+
+    .col-title{
+        min-width: 122px;
+        flex: 0 0 122px;
+        padding:0 10px 0 22px;
+    }
+
+    .form-control,.custom-select{
+        min-height: 55px;
+        @include tablet{
+            min-height:40px;
+        }
+    }
+
+    @include tablet{
+        .form-group-multiple{
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+    }
+
+    @include mobile-xl{
+        .form-group-multiple{
+            padding:0;
+        }
+    }
+
+
+    .btn{
+        width: 470px;
+        max-width: 100%;
+        margin: auto;
+        display: block;
+        margin-top: 40px;
+    }
+
+    /***********************************************************
+	    會員資料管理
+    ***********************************************************/
+    .manage-profile{
+        margin-bottom: 12%;
+    }
+
+
+    /*------------------------------------------
+        Social
+    --------------------------------------------*/
+    .col-bind-account{
+        position: relative;
+        .btn{
+            position: absolute;
+            width: auto;
+            right:15px;
+            z-index: 100;
+            margin: 0;
+            padding: 1px 7px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #bind-account{
+            padding-right: 80px;
+        }
+    }
+
+    /*------------------------------------------
+        Birthday
+    --------------------------------------------*/
+
+    .row-birthday{
+        .col-ipt{
+            display: flex;
+            justify-content: space-between;
+        }
+        .custom-select{
+            flex:calc(92% / 3);
+            max-width: calc(92% / 3);
+        }
+        @include tablet{
+            .col-title{
+                width: auto;
+                // 把select擠下去
+                flex:65%;
+                max-width: 65%;
+            }
+
+        }
+    }
+
+
+    /*------------------------------------------
+        Addr
+    --------------------------------------------*/
+    .row-addr{
+        .col-ipt{
+            display: flex;
+        }
+
+        [data-role="zipcode"].zipcode,
+        [data-role="county"].county,
+        [data-role="district"].district
+        {
+            max-width: 98px;
+            flex-basis: 98px;
+            flex-shrink: 0;
+        }
+
+        // 城市
+        [data-role="county"].county{
+            margin: 0px 13px;
+        }
+        // 區域
+        [data-role="district"].district{
+            margin-right: 13px;
+        }
+        // 路
+        .form-control.road{
+            flex-shrink: 1;
+        }
+
+        @include tablet{
+            .col-ipt{
+                flex-wrap: wrap;
+            }
+            .form-control,.custom-select{
+                margin-top:10px;
+            }
+            [data-role="zipcode"].zipcode,
+            [data-role="county"].county,
+            [data-role="district"].district
+            {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+            [data-role="county"].county{
+                margin-left:0;
+                margin-right:0;
+            }
+        }
+    }
+
+}
+
+
+/*********************************
+    letter_list
+**********************************/
+.p-letter-list{
+    .container{
+        @include tablet{
+            max-width: 100%;
+        }
+    }
+
+    .lists-letter-list{
+        margin:0;
+    }
+
+    // 調整 CheckBox
+    .custom-control-label::before,
+    .custom-control-label::after
+    {
+        top:0.45rem;
+    }
+
+    // 調整 Checkbox(end)
+    .item-delete{
+        flex:5%;
+        max-width: 5%;
+    }
+    .item-send{
+        flex:20%;
+        max-width: 20%;
+        text-align: center;
+    }
+    .item-subject{
+        flex:75%;
+        max-width: 75%;
+        text-align: left;
+    }
+
+    @include tablet{
+        .item-delete{
+            flex:6%;
+            max-width: 6%;
+        }
+        .item-subject{
+            flex:74%;
+            max-width: 74%;
+            text-align: left;
+        }
+    }
+
+    /*--------------------------------------------------------------------
+        Title
+    -------------------------------------------------------------------*/
+    .list-title{
+        // 調整 CheckBox --> Title打勾時不要更換底色
+        .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+            background:$color-sec;
+        }
+        // 調整 Checkbox(end)
+        .item-delete{
+            &.item-delete{
+                @include mobile-xl{
+                    display: block;
+                    position: relative;
+                    z-index: 2;
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+    /*--------------------------------------------------------------------
+        Item
+    -------------------------------------------------------------------*/
+    .list-item
+    {
+        .item{
+            @include mobile-xl{
+                padding-left:80px;
+            }
+        }
+        .item-delete{
+            @include mobile-xl{
+                &.item-delete{
+                    padding:0;
+                }
+            }
+        }
+        .item-send{
+        }
+        .item-subject{
+            color:$color-money;
+            @include mobile-xl{
+                &:before{
+                    top:24px;
+                }
+            }
+
+        }
+    }
+}
+
+
+/*********************************
+    letter_detailed
+**********************************/
+.p-letter-detailed{
+    // 隱藏的標題
+    .part-title{
+        @include pc{
+            display: none;
+        }
+    }
+
+    .mail-content{
+        @include pc{
+            margin-top: 15px;
+        }
+    }
+
+    /*--------------------------------------------------------------------
+        Top bar
+    -------------------------------------------------------------------*/
+    .sect-topbar{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+    .mail-info{
+        text-align: right;
+    }
+
+    .mail-delete{
+        margin-left: 15px;
+        .fa-trash-o{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    /*--------------------------------------------------------------------
+        Title
+    -------------------------------------------------------------------*/
+    .mail-title{
+        .text{
+            color:$color-primary;
+            text-align-last: left;
+            margin-bottom: 60px;
+        }
+    }
+
+    .btn-sect{
+        text-align: center;
+    }
+
+}
+
+
+/*********************************
+    shopping_record
+**********************************/
+.p-shopping-record{
+    .container{
+        @include tablet{
+            max-width:100%;
+        }
+    }
+
+    // 購買紀錄
+    .lists-shopping-record{
+        margin:0;
+        a{
+            color:$color-primary;
+        }
+    }
+
+    /*--------------------------------------------------------------------
+        共同間距 對齊設定
+    -------------------------------------------------------------------*/
+    .item{
+        word-break: break-all;
+        padding:0 5px;
+    }
+
+    .item-date{
+        text-align: center;
+        flex:15%;
+        max-width: 15%;
+    }
+    .item-id{
+        text-align: center;
+        flex:16%;
+        max-width: 16%;
+    }
+    .item-tally{
+        text-align: right;
+        flex:11%;
+        max-width: 11%;
+    }
+    .item-pay-opt{
+        flex:35%;
+        max-width: 35%;
+        text-align: center;
+    }
+    .item-pay-status{
+        text-align: center;
+        flex:13%;
+        max-width: 13%;
+    }
+    .item-status{
+        text-align: center;
+        flex:10%;
+        max-width: 10%;
+    }
+
+    @include pc-lg{
+        .item-id{
+            flex:17%;
+            max-width: 17%;
+        }
+        .item-pay-opt{
+            flex:34%;
+            max-width: 34%;
+        }
+    }
+
+    /*--------------------------------------------------------------------
+        Item
+    -------------------------------------------------------------------*/
+    .list-item{
+        .item-tally{
+            color:$color-money;
+        }
+    }
+
+
+    /*--------------------------------------------------------------------
+        付款方式 卡片 Card
+    -------------------------------------------------------------------*/
+    .card{
+        max-width: 86%;
+        margin:auto;
+        border-color: $color-primary;
+        @include pc-lg{
+            max-width: 83%;
+        }
+        .card-header{
+            text-align: center;
+            padding:0;
+            background: $color-sec;
+            color:$color-primary;
+            border-bottom-color: $color-primary;
+        }
+        .card-body{
+            padding:5px;
+        }
+
+        .content{
+            text-align: left;
+            word-break: break-all;
+        }
+
+        .body-item{
+            display: flex;
+            flex-wrap:wrap;
+        }
+
+        .title{
+            &:after{
+                content:'';
+                width:1px;
+                height:.8em;
+                position: relative;
+                background: $color-gray;
+                display: inline-block;
+                margin: 0 5px;
+            }
+        }
+        // Pc-1200
+        @include pc-lg{
+            .title{
+                &:after{
+                    width: 0;
+                }
+            }
+            .content{
+                flex:100%;
+                max-width: 100%;
+                text-align-last: left;
+                border-left: 1px solid #ccc;
+                line-height: 1;
+                padding-left: 8px;
+                margin-left: .5em;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+
+    @include mobile-xl{
+        // Unset Cause Ie Bugs
+        flex:auto!important;
+        .card{
+            min-width: 100%;
+            margin:0;
+            .card-body{
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

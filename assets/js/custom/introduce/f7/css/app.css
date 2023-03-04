@@ -1,0 +1,349 @@
+@charset "UTF-8";
+/***** 展示用 套版要刪掉 ********/
+pre {
+  background: #7c7c8d;
+  color: #fff;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow-x: scroll;
+}
+
+/***** 展示用 套版要刪掉(END) ********/
+/***** 404 PAGE *********/
+.framework7-root .error404 .fab {
+  width: 90%;
+}
+
+.framework7-root .error404 .fab .error-icon {
+  max-width: 100px;
+}
+
+.framework7-root .error404 .fab h2 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: #007aff;
+}
+
+.framework7-root .error404 .fab p {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.4);
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+.framework7-root .error404 .fab > a.error-back-btn {
+  width: 50%;
+  max-width: 200px;
+  margin: 10px auto;
+}
+
+/***** 調整同步 安卓 及 iphone 原生預設樣式**************/
+.ios body, .md body {
+  font-family: '微軟正黑體','黑體',Roboto,Noto,Helvetica,Arial,sans-serif;
+}
+
+/*縮小navbar 高度*/
+.md .navbar {
+  height: 44px;
+}
+
+.md .navbar ~ * .subnavbar, .md .navbar ~ .subnavbar, .md .page-with-subnavbar .navbar ~ * .subnavbar, .md .page-with-subnavbar .navbar ~ .subnavbar, .md .navbar + .toolbar:not(.toolbar-bottom-md):not(.messagebar) {
+  top: 44px;
+}
+
+.md .navbar ~ * .page-content, .md .navbar ~ .page-content {
+  padding-top: 44px;
+}
+
+.md .navbar ~ .subnavbar ~ * .page-content, .md .navbar ~ .subnavbar ~ .page-content, .md .page-with-subnavbar .navbar ~ * .page-content, .md .page-with-subnavbar .navbar ~ .page-content {
+  padding-top: 88px;
+}
+
+.md .page {
+  background: #efeff4;
+}
+
+.md .list ul {
+  background: #fff;
+}
+
+.actions-button img {
+  max-width: 100%;
+}
+
+.ios .navbar .title, .md .navbar .title {
+  line-height: 1.5;
+}
+
+.md .dialog-buttons-vertical .dialog-buttons .dialog-button {
+  text-align: center;
+}
+
+.md .theme-dark .navbar {
+  background: #171717;
+}
+
+.md .subnavbar {
+  height: 45px;
+  background: #f7f7f8;
+}
+
+.md .subnavbar .button:not(.button-fill):not(.button-fill-md) {
+  color: #007aff;
+}
+
+.md .subnavbar .button {
+  border: 1px solid #007aff;
+  line-height: 27px;
+  height: 29px;
+  border-radius: 0;
+}
+
+.md .segmented .button:first-child {
+  border-radius: 5px 0 0 5px;
+  border-right: 0;
+  border-left: 1px #007aff solid;
+}
+
+.md .segmented .button:last-child {
+  border-radius: 0 5px 5px 0;
+  border-left: 0;
+}
+
+.md .segmented .button.button-active, .md .segmented .tab-link-active, .md .subnavbar .button.button-active:not(.button-fill):not(.button-fill-md), .md .subnavbar .button.tab-link-active:not(.button-fill):not(.button-fill-md) {
+  color: #fff;
+}
+
+/*=共用基礎設定*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+  /*For IE 6&7 only*/
+}
+
+.fixed-btn-wrap.page {
+  padding-bottom: 90px;
+}
+
+.btn-wrap {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  color: #fff;
+  background: transparent;
+  z-index: 100;
+  text-align: center;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.btn-wrap.two-btn .button, .popup-black .btn-wrap.two-btn a {
+  width: 38%;
+  display: inline-block;
+  margin: 1%;
+  font-size: 20px;
+  line-height: 42px;
+  height: 44px;
+  background: #bb001b;
+  font-size: 1rem;
+}
+
+.btn-wrap.thr-btn .button, .popup-black .btn-wrap.thr-btn a {
+  width: 29%;
+  display: inline-block;
+  margin: 1%;
+  font-size: 20px;
+  line-height: 42px;
+  height: 44px;
+  background: #bb001b;
+  font-size: 1rem;
+}
+
+.framework7-root .no-navbar a, .framework7-root .navbar a {
+  min-width: 44px;
+}
+
+.framework7-root .no-navbar a, .framework7-root .navbar a.link {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*=燈箱 黑底 */
+.popup-black {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  transition-property: transform,-webkit-transform;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  background: #fff;
+  z-index: 10009;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  display: block;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
+}
+
+.popup-black.modal-in {
+  display: block;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.popup-black .block {
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+
+.popup-black p, .popup-black a {
+  color: #fff;
+}
+
+.popup-black a:hover, .popup-black a:active, .popup-black a:focus {
+  color: #ff0;
+}
+
+.popup-black .btn-wrap {
+  position: fixed;
+  left: 50%;
+  width: 90%;
+  height: 90px;
+  line-height: 90px;
+  color: #fff;
+  z-index: 100;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.button.button-round {
+  border: 2px #fff solid;
+  color: #fff;
+  line-height: 42px;
+  height: 44px;
+}
+
+/*=燈箱 黑底 end*/
+/*=登入頁*/
+.sign_up_page .logo {
+  width: 60%;
+  margin: 5% auto;
+  display: block;
+  bottom: 10px;
+}
+
+.framework7-root .sign-fixed-wrap > a {
+  display: block;
+  line-height: 50px;
+  padding: 0 20px;
+  background: #2cb5a9;
+  color: #fff;
+  border-radius: 100px;
+  width: 48%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.framework7-root .sign-fixed-wrap > a.next {
+  float: right;
+}
+
+.framework7-root .sign-fixed-wrap > a.prev {
+  float: left;
+}
+
+.framework7-root .sign-fixed-wrap > a.done {
+  float: right;
+}
+
+.framework7-root .page.sign_up_page .forgot_pwd_btn {
+  color: #2CB5A9;
+  border-bottom: 1px #2CB5A9 solid;
+}
+
+.sign-fixed-wrap {
+  position: absolute;
+  padding-top: 80px;
+  bottom: 10px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*=登入頁(end) */
+/***** 圖片標頭樣式 *********/
+.framework7-root .no-navbar .toolbar {
+  background: transparent;
+  top: 0;
+  bottom: auto;
+}
+
+.framework7-root .no-navbar .toolbar.active {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.framework7-root .no-navbar a .icon-back {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ffffff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+}
+
+/*  圖片標頭 ICON SHADOW  */
+.framework7-root .no-navbar .toolbar .icon {
+  -webkit-filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.7));
+}
+
+.framework7-root .no-navbar .toolbar:not(.toolbar-bottom-md):not(.messagebar) ~ .page-content {
+  padding-top: 0;
+}
+
+/***** 個人預設樣式 *********/
+.full-width {
+  width: 100%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+/*# sourceMappingURL=app.css.map */

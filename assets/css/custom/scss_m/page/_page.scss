@@ -1,0 +1,362 @@
+/* =============================
+            問卷內頁
+============================= */
+.ios,
+.md {
+    .p-question-detailed {
+        .item-input-wrap {
+            margin-top: 0;
+        }
+
+        .item-title {
+            vertical-align: middle;
+        }
+
+        // Radio、Checkbox
+        .radio-group ul,
+        .checkbox-group ul {
+            padding-left: 0;
+        }
+
+        .radio-group {
+            .item-radio .icon-radio {
+                margin-top: 0;
+                margin-right: 15px;
+                border: 1px solid $color-gray-light;
+                border-radius: 50%;
+                position: relative;
+                top: initial;
+                right: initial;
+            }
+
+            .item-radio input[type='radio']:checked~.icon-radio {
+                background-image: none;
+
+                &::after {
+                    @include size(50%);
+                    @include pos-center;
+                    border-radius: 50%;
+                    background: $color-primary;
+                }
+            }
+        }
+
+        .ranger-slider-group {
+            .item-cell:not(:nth-child(2)) {
+                max-width: 42px;
+                margin: 0;
+                text-align: center;
+            }
+
+            .item-cell:nth-child(2) {
+                width: calc(100% - (42px * 2));
+                margin: 0;
+            }
+        }
+
+        .icon-radio:after {
+            margin-left: 0;
+            margin-top: 0;
+        }
+
+        // Ranger Slider
+        .range-bar {
+            height: 6px;
+            transform: translateY(-50%);
+        }
+
+        .range-bar-active {
+            border-radius: 2px;
+            background: $color-primary;
+        }
+    }
+}
+
+.ios .navbar-inner .left .fa,
+.ios .navbar-inner .left .icon,
+.md .navbar-inner .left .fa,
+.md .navbar-inner .left .icon,
+.ios .navbar-inner .title,
+.md .navbar-inner .title {
+    color: #26539c;
+}
+
+.p-question-detailed {
+    .block>.list ul {
+        padding: 15px 10px;
+    }
+
+    .item-input-wrap {
+        padding-bottom: 10px;
+
+        &.checkbox-group {
+            margin-bottom: -10px;
+        }
+    }
+
+    input,
+    select,
+    .radio-group {
+        margin-bottom: -10px;
+    }
+
+    // Radio、Checkbox
+    .radio-group,
+    .checkbox-group {
+        .item-radio {
+            padding-left: 0;
+        }
+
+        .item-radio-other,
+        .item-checkbox-other {
+            .input-other {
+                display: none;
+                border-bottom: 1px solid #c8c7cc;
+            }
+
+            >input:checked~.item-inner .input-other {
+                display: block;
+            }
+        }
+    }
+
+    .checkbox-group {
+        .item-checkbox {
+            padding-left: 0;
+        }
+    }
+
+    .question_checkbox .question_tip {
+        display: inline-block;
+        font-size: $fz-mini;
+    }
+
+    // Ranger Slider
+    .ranger-slider-group {
+        display: flex;
+        padding: 8px 0;
+    }
+
+    // 星級評分
+    .rating-star-group {
+        display: flex;
+        justify-content: space-around;
+        padding: 7px 0;
+
+        .form-check-input {
+            display: none;
+        }
+
+        .fa-star-o,
+        .fa-star {
+            font-size: 30px;
+        }
+
+        .fa-star {
+            color: $color-primary;
+        }
+    }
+
+    .fab-bottom-bottom {
+        @include flex(space-between);
+
+        .btn-solid {
+            width: calc(100% / 2 - 10px) !important;
+
+            &.bg-cancel {
+                background: $color-gray-dark;
+            }
+        }
+    }
+
+    // 數字框
+    .question_number {
+        .item-input-wrap {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-clear-button {
+            display: none;
+        }
+
+        .ml-2 {
+            display: inline-block;
+            min-width: 20px;
+            margin-bottom: -10px;
+            word-break: keep-all;
+        }
+    }
+
+    // 單圖上傳
+    .upload-picture {
+        width: 100%;
+    }
+
+    a.upload_pic_btn {
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin: 0 auto;
+        margin-top: 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 50px;
+        background: -webkit-gradient(linear, left top, right top, from(#4b9ed2), to(#014994));
+        background: linear-gradient(to right, #4b9ed2, #014994);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .e-head-shot .circle-inner {
+        width: 300px;
+        height: 300px;
+        border: 5px solid #EBC496;
+        border-radius: 50%;
+        background: #323134;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 0 auto;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .profile-list-img-box {
+        width: 80%;
+        margin: 40px auto;
+        display: block;
+        height: 0;
+        padding-bottom: 80%;
+        position: relative;
+    }
+
+    .profile-list-img-box.d-none {
+        display: none;
+    }
+
+    i.delete-icon.fa.fa-times-circle-o.del_pic_btn {
+        position: absolute;
+        font-size: 35px;
+        right: 0;
+    }
+
+    // 多圖上傳
+    .picture-list, .photo-item, .photo-block {
+        width: 100%;
+    }
+
+    .btn-solid {
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin: 0 auto;
+        margin-top: 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 50px;
+        background: -webkit-gradient(linear, left top, right top, from(#4b9ed2), to(#014994));
+        background: linear-gradient(to right, #4b9ed2, #014994);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .photo-item {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .remove-btn {
+        display: inline-block;
+        @include size(30px);
+        padding: 5px;
+        border: 1px solid $color-primary;
+        border-radius: 50%;
+        box-sizing: border-box;
+        font-size: 20px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+        .fa-times {
+            @include pos-center;
+        }
+    }
+
+}
+
+/* =============================
+         問卷內頁(END)
+============================= */
+
+
+/* =============================
+            多圖上傳
+============================= */
+.p-upload_picture {
+
+    .page-content {
+        padding-bottom: 30px;
+    }
+
+    .picture-list {
+        padding: 15px 15px 0 15px;
+    }
+
+    .add-new-photo {
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin: 0 auto;
+        margin-top: 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 50px;
+        background: -webkit-gradient(linear, left top, right top, from(#4b9ed2), to(#014994));
+        background: linear-gradient(to right, #4b9ed2, #014994);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .photo-item {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .remove-btn {
+        display: inline-block;
+        @include size(30px);
+        padding: 5px;
+        border: 1px solid $color-primary;
+        border-radius: 50%;
+        box-sizing: border-box;
+        font-size: 20px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+        .fa-times {
+            @include pos-center;
+        }
+    }
+}
+
+/* =============================
+          多圖上傳(END)
+============================= */
