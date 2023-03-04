@@ -15072,7 +15072,7 @@ P:	page title
   margin-left: -36px;
   margin-top: -36px;
   position: absolute;
-  background: url("/assets/images/icon/play.png") no-repeat;
+  background: url("assets/images/icon/play.png") no-repeat;
   cursor: pointer;
   background-size: 70%;
   background-position: center;

@@ -41,10 +41,10 @@
   font-family: 'Framework7 Icons';
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/Framework7Icons-Regular.eot");
-  src: url("/assets/fonts/Framework7Icons-Regular.woff2") format("woff2"),
-       url("/assets/fonts/Framework7Icons-Regular.woff") format("woff"),
-       url("/assets/fonts/Framework7Icons-Regular.ttf") format("truetype");
+  src: url("assets/fonts/Framework7Icons-Regular.eot");
+  src: url("assets/fonts/Framework7Icons-Regular.woff2") format("woff2"),
+       url("assets/fonts/Framework7Icons-Regular.woff") format("woff"),
+       url("assets/fonts/Framework7Icons-Regular.ttf") format("truetype");
 }
 
 .f7-icons {
