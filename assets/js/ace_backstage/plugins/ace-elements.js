@@ -1186,7 +1186,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Ace\'s JavaScript requires
 			canvas.width = w; canvas.height = h;
 			var context = canvas.getContext('2d');
 			context.drawImage(img, 0, 0, img.width, img.height, 0, 0, w, h);
-			dataURL = canvas.toDataURL(/*type == 'image/jpeg' ? type : 'image/png', 10*/)
+			dataURL = canvas.toDataurl(*type == 'image/jpeg' ? type : 'image/png', 10*/)
 		} catch(e) {
 			dataURL = null;
 		}

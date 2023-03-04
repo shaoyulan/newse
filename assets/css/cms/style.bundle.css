@@ -80560,7 +80560,7 @@ table td .btn-group .btn{
   border-left:none;
 }
 .has-error input, .has-error textarea {
-    background: url(/assets/images/cms/err1.png) no-repeat right top;
+    background: url(assets/images/cms/err1.png) no-repeat right top;
     padding-right:34px;
 }
 .has-error input[name="start_date"], .has-error input[name="end_date"]{

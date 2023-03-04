@@ -479,7 +479,7 @@ body {
     }
 }
 .website-bg{
-    background-image: url(/assets/images/bg/background.png);
+    background-image: url(assets/images/bg/background.png);
     background-size: cover;
     position: fixed;
     left: 0;
@@ -5548,7 +5548,7 @@ $gutters:(
         display: block;
         width: 10px;
         height: 10px;
-        background-image: url(/assets/images/icon/arrow.svg);
+        background-image: url(assets/images/icon/arrow.svg);
         position: absolute;
         top: 50%;
         left: calc(100% + 5px);
@@ -6676,7 +6676,7 @@ $gutters:(
 
 // bg-marble
 .bg-marble{
-    background-image: url(/assets/images/bg/background.png);
+    background-image: url(assets/images/bg/background.png);
     background-size: cover;
 }
 // bg-marble /
@@ -8162,7 +8162,7 @@ $gutters:(
             display: block;
             width: 14px;
             height: 14px;
-            background-image: url(/assets/images/icon/circle-line.svg);
+            background-image: url(assets/images/icon/circle-line.svg);
             background-size: contain;
             margin-right: 10px;
         }
@@ -8171,7 +8171,7 @@ $gutters:(
             display: block;
             width: 14px;
             height: 14px;
-            background-image: url(/assets/images/icon/circle-full.svg);
+            background-image: url(assets/images/icon/circle-full.svg);
             background-size: contain;
             margin-right: 10px;
             position: absolute;
